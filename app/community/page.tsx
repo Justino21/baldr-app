@@ -769,10 +769,12 @@ export default function CommunityPage() {
                           {/* Single Image */}
                           {post.image && !post.beforeAfter && !post.gallery && (
                             <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-                              <img
+                              <Image
                                 src={post.image}
                                 alt="Post image"
-                                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                                fill
+                                className="object-cover hover:scale-105 transition-transform duration-300"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                               />
                             </div>
                           )}
@@ -783,20 +785,24 @@ export default function CommunityPage() {
                               <div className="space-y-2">
                                 <p className="text-sm font-semibold text-gray-500">Before</p>
                                 <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-                                  <img
+                                  <Image
                                     src={post.beforeAfter.before || "/images/products/onion-juice.jpg"}
                                     alt="Before"
-                                    className="w-full h-full object-cover object-[center_30%] hover:scale-105 transition-transform duration-300"
+                                    fill
+                                    className="object-cover object-[center_30%] hover:scale-105 transition-transform duration-300"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                   />
                                 </div>
                               </div>
                               <div className="space-y-2">
                                 <p className="text-sm font-semibold text-gray-500">After</p>
                                 <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-                                  <img
+                                  <Image
                                     src={post.beforeAfter.after || "/images/products/onion-juice.jpg"}
                                     alt="After"
-                                    className="w-full h-full object-cover object-[center_30%] hover:scale-105 transition-transform duration-300"
+                                    fill
+                                    className="object-cover object-[center_30%] hover:scale-105 transition-transform duration-300"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                   />
                                 </div>
                               </div>
@@ -808,10 +814,12 @@ export default function CommunityPage() {
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                               {post.gallery.map((image, index) => (
                                 <div key={index} className="relative aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-                                  <img
+                                  <Image
                                     src={image || "/images/products/biotin-collagen-supplements.jpg"}
                                     alt={`Gallery image ${index + 1}`}
-                                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                                    fill
+                                    className="object-cover hover:scale-105 transition-transform duration-300"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                   />
                                 </div>
                               ))}
@@ -1130,10 +1138,12 @@ export default function CommunityPage() {
                           {/* Single Image */}
                           {review.image && !review.beforeAfter && (
                             <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-                              <img
+                              <Image
                                 src={review.image || "/images/products/biotin-collagen-supplements.jpg"}
                                 alt="Review image"
-                                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                                fill
+                                className="object-cover hover:scale-105 transition-transform duration-300"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                               />
                             </div>
                           )}
@@ -1144,20 +1154,24 @@ export default function CommunityPage() {
                               <div className="space-y-2">
                                 <p className="text-sm font-semibold text-gray-500">Before</p>
                                 <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-                                  <img
+                                  <Image
                                     src={review.beforeAfter.before || "/images/products/onion-juice.jpg"}
                                     alt="Before"
-                                    className="w-full h-full object-cover object-[center_30%] scale-110 hover:scale-115 transition-transform duration-300"
+                                    fill
+                                    className="object-cover object-[center_30%] scale-110 hover:scale-115 transition-transform duration-300"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                   />
                                 </div>
                               </div>
                               <div className="space-y-2">
                                 <p className="text-sm font-semibold text-gray-500">After</p>
                                 <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-                                  <img
+                                  <Image
                                     src={review.beforeAfter.after || "/images/products/onion-juice.jpg"}
                                     alt="After"
-                                    className="w-full h-full object-cover object-[center_30%] hover:scale-105 transition-transform duration-300"
+                                    fill
+                                    className="object-cover object-[center_30%] hover:scale-105 transition-transform duration-300"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                   />
                                 </div>
                               </div>
